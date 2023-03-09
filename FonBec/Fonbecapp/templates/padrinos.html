@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %} <div class="card">
+    <div class="card-header">
+        Listado Padrinos
+    </div> 
+    <a href="{% url 'home' %}" class="btn btn-primary btn-lg">Home</a>
+    <div class="card-body">
+        <h4 class="card-title">Padrinos</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Javier</td>
+                    <td>Macchiavello</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>   
+</div>
+{% endblock %}

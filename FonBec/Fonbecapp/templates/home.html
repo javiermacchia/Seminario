@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}  
+  <div class="container">
+    <div class="jumbotron">
+    
+      <h1 class="display-4">Welcome to FonBec</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      {% if user.is_authenticated %} 
+        <p>You are logged in as {{ user.username }}.</p>
+        <a href="{% url 'cartas' %}" class="btn btn-primary btn-lg">Cartas</a>
+        <a href="{% url 'padrinos' %}" class="btn btn-primary btn-lg">Padrinos</a>
+      {% else %}
+        <a href="{% url 'login' %}" class="btn btn-primary btn-lg">Login</a>
+      {% endif %}
+     
+    </div>
+  </div>
+  {% endblock %} 
